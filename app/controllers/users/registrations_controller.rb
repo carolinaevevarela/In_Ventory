@@ -11,10 +11,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   # POST /resource
-  def create
-    @roles = Role.pluck(:name, :id)
-    super
-  end
+  # def create
+  #   @roles = Role.pluck(:name, :id)
+  #   super
+  #   #redirect_to root_path
+  # end
 
   # GET /resource/edit
   # def edit
@@ -44,7 +45,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :role_id])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :role_id, :rut])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
