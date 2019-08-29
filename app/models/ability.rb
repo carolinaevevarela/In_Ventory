@@ -4,13 +4,13 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, Post, public: true
-
+    user ||= User.new
     if user.admin?  # additional permissions for administrators
-      can :read, :all
-    else
-      can :read, :edit, :destroy, :update
-
+      can :manage, :all
+    elsif user.role == "bookseller"
+      alias_action :create, :read, :edit, :destroy, :update
+    elsif user.role == "editor"
+      alias_action :create, :read, :edit, :destroy, :update
     end
     # Define abilities for the passed in user here. For example:
     #

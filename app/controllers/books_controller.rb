@@ -15,10 +15,12 @@ class BooksController < ApplicationController
   # GET /books/new
   def new
     @book = Book.new
+    @categories = Category.pluck(:name)
   end
 
   # GET /books/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /books
