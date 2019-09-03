@@ -35,8 +35,10 @@
     <%= form.label :category_id %>
     <%= form.select :category_id, @categories %>
   </div>
+  <p><a href="<%= new_category_path%>">Añade una categoría</a><br /></p>
 
-  <div class="actions">
+
+  <div class="actions" onSubmit="alert('El libro ha sido creado');">
     <%= form.submit %>
   </div>
 <% end %>
