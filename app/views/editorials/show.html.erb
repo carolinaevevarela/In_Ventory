@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Business name:</strong>
+  <%= @editorial.business_name %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @editorial.rut %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @editorial.address %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @editorial.contact %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @editorial.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @editorial.email %>
+</p>
+
+<%= link_to 'Edit', edit_editorial_path(@editorial) %> |
+<%= link_to 'Back', editorials_path %>

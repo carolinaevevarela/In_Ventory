@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.select :category_id, @categories %>
+    <%= form.select :category_id, [nil]+Category.all.map(&:name) %>
   </div>
   <p><a href="<%= new_category_path%>">Añade una categoría</a><br /></p>
 

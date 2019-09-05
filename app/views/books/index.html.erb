@@ -7,6 +7,7 @@
       <th>Autor</th>
       <th>Isbn</th>
       <th>Editorial</th>
+      <th>Categoría</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= book.autor %></td>
         <td><%= book.isbn %></td>
         <td><%= book.editorial %></td>
+        <td><%= book.categories.name %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
