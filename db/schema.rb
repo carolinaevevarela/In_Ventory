@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_05_012123) do
+ActiveRecord::Schema.define(version: 2019_09_05_014036) do
 
   create_table "books", force: :cascade do |t|
     t.string "titulo"
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 2019_09_05_012123) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "guides", force: :cascade do |t|
+    t.integer "editorial_id"
+    t.integer "number_of_guide"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["editorial_id_id"], name: "index_guides_on_editorial_id_id"
   end
 
   create_table "roles", force: :cascade do |t|
