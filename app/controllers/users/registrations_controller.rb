@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  load_and_authorize_resource
-  before_action :configure_sign_up_params, only: [:create]
+  #load_and_authorize_resource
+  before_action :configure_sign_up_params, only: [:create, :update]
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
@@ -22,6 +22,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def edit
    super
   end
+
 
   # PUT /resource
   # def update

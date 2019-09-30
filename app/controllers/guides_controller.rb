@@ -32,6 +32,7 @@ class GuidesController < ApplicationController
         format.html { redirect_to @guide, notice: 'Guide was successfully created.' }
         format.json { render :show, status: :created, location: @guide }
       else
+        byebug
         format.html { render :new }
         format.json { render json: @guide.errors, status: :unprocessable_entity }
       end
