@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+  </head>
+  <body>
+
 <%= form_with(model: guide) do |form| %>
   <% if guide.errors.any? %>
     <div id="error_explanation">
@@ -21,24 +32,33 @@
     <%= form.text_field :number_of_guide %>
   </div>
 
-  <div id="formulario">
-            <form method="post" id="formdata">
-                <label for="isbn">ISBN </label><input type="text" name="isbn" id="isbn" required="required"></br>
-                <label for="title">Título </label><input type="text" name="title" id="title" required="required"></br>
-                <label for="quantity">Cantidad </label><input type="text" name="quantity" id="quantity" required="required"></br>
-                <label for="pneto">Precio neto </label><input type="text" name="pneto" id="pneto" required="required"></br>
-                <label for="pvp">PVP </label><input type="text" name="pvp" id="pvp" required="required"></br>
-                <input type="button" id="botonenviar" value="Enviar">
-            </form>
-        </div>
-        <div id="exito" style="display:none">
-            Sus datos han sido recibidos con éxito.
-        </div>
-        <div id="fracaso" style="display:none">
-            Se ha producido un error durante el envío de datos.
-        </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+<div id="formulario">
+        <form method="post" id="formdata">
+          <%# <%= form.input_field :book_id
+            data: {placeholder: "¿Qué libro buscas?",
+              saved: @search.book.to_json,
+              url: books_path
+            },
+              input_html:  { class: "span8 ac-select2" }
+          %> %>
+
+              <label for="quantity">Cantidad </label><input type="text" name="quantity" id="quantity" required="required"></br>
+              <label for="pneto">Precio neto </label><input type="text" name="pneto" id="pneto" required="required"></br>
+              <label for="pvp">PVP </label><input type="text" name="pvp" id="pvp" required="required"></br>
+              <input type="button" id="botonenviar" value="Enviar">
+          </form>
+      </div>
+      <div id="exito" style="display:none">
+          Sus datos han sido recibidos con éxito.
+      </div>
+      <div id="fracaso" style="display:none">
+          Se ha producido un error durante el envío de datos.
+      </div>
+
+    </body>
+    </html>
