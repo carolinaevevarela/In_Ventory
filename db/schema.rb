@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_25_234412) do
+ActiveRecord::Schema.define(version: 2019_10_08_002403) do
 
   create_table "books", force: :cascade do |t|
     t.string "titulo"
@@ -40,8 +40,19 @@ ActiveRecord::Schema.define(version: 2019_09_25_234412) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "guide_items", force: :cascade do |t|
+    t.integer "guide_id"
+    t.string "isbn"
+    t.integer "quantity"
+    t.integer "pneto"
+    t.integer "pvp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["guide_id"], name: "index_guide_items_on_guide_id"
+  end
+
   create_table "guides", force: :cascade do |t|
-    t.integer "editorial_id_id"
+    t.integer "editorial_id"
     t.integer "number_of_guide"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -50,7 +61,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_234412) do
     t.integer "quantity"
     t.integer "pneto"
     t.integer "pvp"
-    t.index ["editorial_id_id"], name: "index_guides_on_editorial_id_id"
+    t.index ["editorial_id"], name: "index_guides_on_editorial_id"
   end
 
   create_table "roles", force: :cascade do |t|

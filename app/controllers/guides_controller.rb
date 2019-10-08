@@ -10,6 +10,7 @@ class GuidesController < ApplicationController
   # GET /guides/1
   # GET /guides/1.json
   def show
+    @guide_item = GuideItem.new
   end
 
   # GET /guides/new
@@ -31,8 +32,9 @@ class GuidesController < ApplicationController
       if @guide.save
         format.html { redirect_to @guide, notice: 'Guide was successfully created.' }
         format.json { render :show, status: :created, location: @guide }
+
       else
-        byebug
+        raise @guide.errors.inspect
         format.html { render :new }
         format.json { render json: @guide.errors, status: :unprocessable_entity }
       end
@@ -71,6 +73,6 @@ class GuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
-      params.require(:guide).permit(:editorial_id_id, :number_of_guide)
+      params.require(:guide).permit(:editorial_id, :number_of_guide)
     end
 end

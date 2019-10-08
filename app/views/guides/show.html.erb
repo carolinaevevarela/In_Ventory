@@ -2,7 +2,7 @@
 
 <p>
   <strong>Editorial:</strong>
-  <%= @guide.editorial_id %>
+  <%= @guide.editorial.business_name %>
 </p>
 
 <p>
@@ -12,3 +12,21 @@
 
 <%= link_to 'Edit', edit_guide_path(@guide) %> |
 <%= link_to 'Back', guides_path %>
+
+<%= render 'guide_items/form', guide_item: @guide_item %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Isbn</th>
+      <th>Quantity</th>
+      <th>Pneto</th>
+      <th>Pvp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id='guide_items'>
+
+  </tbody>
+</table>

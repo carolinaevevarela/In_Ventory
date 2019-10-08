@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :guide_items
   resources :guides
   resources :editorials
   resources :categories

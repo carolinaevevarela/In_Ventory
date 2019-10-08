@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Guide Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Isbn</th>
+      <th>Quantity</th>
+      <th>Pneto</th>
+      <th>Pvp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guide_items.each do |guide_item| %>
+      <tr>
+        <td><%= guide_item.isbn %></td>
+        <td><%= guide_item.quantity %></td>
+        <td><%= guide_item.pneto %></td>
+        <td><%= guide_item.pvp %></td>
+        <td><%= link_to 'Show', guide_item %></td>
+        <td><%= link_to 'Edit', edit_guide_item_path(guide_item) %></td>
+        <td><%= link_to 'Destroy', guide_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Guide Item', new_guide_item_path %>

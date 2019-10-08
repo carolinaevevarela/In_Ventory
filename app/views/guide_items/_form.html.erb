@@ -1,0 +1,37 @@
+<%= form_with(model: guide_item) do |form| %>
+  <% if guide_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(guide_item.errors.count, "error") %> prohibited this guide_item from being saved:</h2>
+
+      <ul>
+      <% guide_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :isbn %>
+    <%= form.text_field :isbn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pneto %>
+    <%= form.number_field :pneto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pvp %>
+    <%= form.number_field :pvp %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @guide_item.isbn %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @guide_item.quantity %>
+</p>
+
+<p>
+  <strong>Pneto:</strong>
+  <%= @guide_item.pneto %>
+</p>
+
+<p>
+  <strong>Pvp:</strong>
+  <%= @guide_item.pvp %>
+</p>
+
+<%= link_to 'Edit', edit_guide_item_path(@guide_item) %> |
+<%= link_to 'Back', guide_items_path %>
