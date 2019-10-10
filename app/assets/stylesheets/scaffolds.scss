@@ -1,14 +1,14 @@
 body {
-  background-color: #fff;
+  background-color: #85adad;
   color: #333;
   margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Arvo', serif;
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Arvo', serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -88,6 +88,7 @@ label {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-color: grey;
 }
 
 .form {
