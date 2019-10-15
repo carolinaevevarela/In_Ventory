@@ -43,16 +43,18 @@
           <a class="nav-link" href="<%= new_editorial_path%>">Nuevo proveedor</a>
         </li>
         <% end %>
-          <%= form_tag books_path, method: :get, id: "search-form" do%>
-            <%= text_field_tag :keyword, nil, placeholder: "¿Qué estás buscando?"%>
+        <span class="navbar-text"><li><%= current_user.last_sign_in_at if current_user.present? %></li></span>
+          <ul>
+            <%= form_tag books_path, method: :get, id: "search-form" do %>
+            <%= text_field_tag :keyword, nil, placeholder: "¿Qué estás buscando?" %>
             <%= content_tag :button, type: :submit do %>
               Buscar
             <% end %>
           <% end %>
-          <div id="resultados">
+        </ul>
+        <div id="resultados">
 
-          </div>
-        <span class="navbar-text"><li><%= current_user.last_sign_in_at if current_user.present? %></li></span>
+        </div>
       </ul>
     </div>
   </nav>

@@ -11,27 +11,39 @@
     </div>
   <% end %>
 
+<div class="form-row col-md-12">
+<ul>
   <div class="field">
     <%= form.label :isbn %>
-    <%= form.text_field :isbn %>
+    <%= form.text_field :isbn, placeholder: "Isbn" %>
   </div>
+</ul>
 
+<ul>
   <div class="field">
     <%= form.label :quantity %>
-    <%= form.number_field :quantity %>
+    <%= form.number_field :quantity, placeholder: "Cantidad" %>
   </div>
+</ul>
 
+<ul>
   <div class="field">
     <%= form.label :pneto %>
-    <%= form.number_field :pneto %>
+    <%= form.number_field :pneto, placeholder: "Precio neto" %>
   </div>
+</ul>
 
+<ul>
   <div class="field">
     <%= form.label :pvp %>
-    <%= form.number_field :pvp %>
+    <%= form.number_field :pvp, placeholder: "PVP" %>
   </div>
+</ul>
 
+<ul>
   <div class="actions">
     <%= form.submit %>
   </div>
+</ul>
 <% end %>
+</div>

@@ -678,7 +678,7 @@ function resumeProcessing() {
 function done() {
 	var runtime, passed;
 
-	config.autorun = true;
+	config.authorun = true;
 
 	// Log the last module results
 	if ( config.previousModule ) {
@@ -1236,7 +1236,7 @@ function synchronize( callback, priority, seed ) {
 		config.queue.push( callback );
 	}
 
-	if ( config.autorun && !config.blocking ) {
+	if ( config.authorun && !config.blocking ) {
 		process( last );
 	}
 }
@@ -2370,7 +2370,7 @@ QUnit.init = function() {
 	config.updateRate = 1000;
 	config.blocking = false;
 	config.autostart = true;
-	config.autorun = false;
+	config.authorun = false;
 	config.filter = "";
 	config.queue = [];
 

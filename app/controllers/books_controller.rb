@@ -5,7 +5,7 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     palabra = "%#{params[:keyword]}%"
-    @books = Book.where("titulo LIKE ? OR autor LIKE ?",palabra,palabra)
+    @books = Book.where("title LIKE ? OR author LIKE ?",palabra,palabra)
   end
 
   # GET /books/1
@@ -72,6 +72,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:titulo, :autor, :isbn, :editorial)
+      params.require(:book).permit(:title, :author, :isbn, :editorial)
     end
 end

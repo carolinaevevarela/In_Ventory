@@ -14,10 +14,10 @@ class BooksTest < ApplicationSystemTestCase
     visit books_url
     click_on "New Book"
 
-    fill_in "Autor", with: @book.autor
+    fill_in "author", with: @book.author
     fill_in "Editorial", with: @book.editorial
     fill_in "Isbn", with: @book.isbn
-    fill_in "Titulo", with: @book.titulo
+    fill_in "title", with: @book.title
     click_on "Create Book"
 
     assert_text "Book was successfully created"
@@ -28,10 +28,10 @@ class BooksTest < ApplicationSystemTestCase
     visit books_url
     click_on "Edit", match: :first
 
-    fill_in "Autor", with: @book.autor
+    fill_in "author", with: @book.author
     fill_in "Editorial", with: @book.editorial
     fill_in "Isbn", with: @book.isbn
-    fill_in "Titulo", with: @book.titulo
+    fill_in "title", with: @book.title
     click_on "Update Book"
 
     assert_text "Book was successfully updated"
