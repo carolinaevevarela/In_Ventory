@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'search/create'
   resources :guide_items
   resources :guides
   resources :editorials

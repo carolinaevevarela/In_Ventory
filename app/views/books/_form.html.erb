@@ -41,6 +41,8 @@
 
 
   <div class="actions" onSubmit="alert('El libro ha sido creado');">
-    <%= form.submit %>
+    <%= content_tag :button, type: :submit do %>
+     Crear libro
+    <% end %>
   </div>
 <% end %>

@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css?family=Arvo:400,700&display=swap" rel="stylesheet">
+
 <p>
   <strong>Título:</strong>
   <%= @book.titulo %>
@@ -23,5 +25,5 @@
   <%= @book.category_id %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Editar', edit_book_path(@book) %> |
+<%= link_to 'Atrás', books_path %>

@@ -4,7 +4,8 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    palabra = "%#{params[:keyword]}%"
+    @books = Book.where("titulo LIKE ? OR autor LIKE ?",palabra,palabra)
   end
 
   # GET /books/1

@@ -1,12 +1,14 @@
+<link href="https://fonts.googleapis.com/css?family=Arvo:400,700&display=swap" rel="stylesheet">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Guides</h1>
+<h1>Guías de despacho</h1>
 
 <table>
   <thead>
     <tr>
       <th>Editorial</th>
-      <th>Number of guide</th>
+      <th>Número de guía</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +18,9 @@
       <tr>
         <td><%= guide.editorial_id %></td>
         <td><%= guide.number_of_guide %></td>
-        <td><%= link_to 'Show', guide %></td>
-        <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
-        <td><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', guide %></td>
+        <td><%= link_to 'Editar', edit_guide_path(guide) %></td>
+        <td><%= link_to 'Destruir', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Guide', new_guide_path %>
+<%= link_to '¿Nueva guía?', new_guide_path %>

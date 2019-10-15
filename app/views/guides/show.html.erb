@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css?family=Arvo:400,700&display=swap" rel="stylesheet">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,12 +8,12 @@
 </p>
 
 <p>
-  <strong>Number of guide:</strong>
+  <strong>Número de guía:</strong>
   <%= @guide.number_of_guide %>
 </p>
 
-<%= link_to 'Edit', edit_guide_path(@guide) %> |
-<%= link_to 'Back', guides_path %>
+<%= link_to 'Editar', edit_guide_path(@guide) %> |
+<%= link_to 'Atrás', guides_path %>
 
 <%= render 'guide_items/form', guide_item: @guide_item %>
 
