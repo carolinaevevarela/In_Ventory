@@ -11,6 +11,10 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    #@book = Book.find_by(isbn: params[:isbn])
+
+    #respond_to do |format|
+      #if @book.where
   end
 
   # GET /books/new
