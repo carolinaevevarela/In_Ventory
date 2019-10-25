@@ -14,12 +14,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :editorial_id %>
+    <%= form.label :editorial_id, "Editorial" %>
     <%= form.select :editorial_id, Editorial.all.map{|e| [e.business_name, e.id]},{ include_blank: true } %>
   </div>
 
   <div class="field">
-    <%= form.label :number_of_guide %>
+    <%= form.label :number_of_guide, "Número de guía" %>
     <%= form.text_field :number_of_guide %>
   </div>
 

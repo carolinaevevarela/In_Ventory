@@ -14,27 +14,27 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title, "Título" %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :author %>
+    <%= form.label :author, "Autor" %>
     <%= form.text_field :author %>
   </div>
 
   <div class="field">
-    <%= form.label :isbn %>
+    <%= form.label :isbn, "ISBN" %>
     <%= form.number_field :isbn %>
   </div>
 
   <div class="field">
-    <%= form.label :editorial %>
+    <%= form.label :editorial, "Editorial" %>
     <%= form.text_field :editorial %>
   </div>
 
   <div class="field">
-    <%= form.label :category_id %>
+    <%= form.label :category_id, "Categoría" %>
     <%= form.select :category_id, [nil]+Category.all.map(&:name) %>
   </div>
   <p><a href="<%= new_category_path%>">Añade una categoría</a><br /></p>
