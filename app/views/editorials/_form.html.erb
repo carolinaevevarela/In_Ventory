@@ -43,7 +43,9 @@
     <%= form.text_field :email %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions" onSubmit="alert('Proveedor creado exitosamente');">
+    <%= content_tag :button, type: :submit do %>
+     Crear Proveedor
+    <% end %>
   </div>
 <% end %>

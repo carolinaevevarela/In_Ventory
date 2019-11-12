@@ -1,4 +1,4 @@
-<%= form_with(model: guide_item) do |form| %>
+<%= form_with(model: guide_item, remote: true) do |form| %>
   <% if guide_item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(guide_item.errors.count, "error") %> prohibited this guide_item from being saved:</h2>

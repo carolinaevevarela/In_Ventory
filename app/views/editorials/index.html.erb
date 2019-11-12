@@ -2,7 +2,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Editoriales</h1>
+<h1>Proveedores</h1>
 
 <table>
   <thead>
@@ -26,9 +26,9 @@
         <td><%= editorial.contact %></td>
         <td><%= editorial.phone %></td>
         <td><%= editorial.email %></td>
-        <td><%= link_to 'Show', editorial %></td>
-        <td><%= link_to 'Edit', edit_editorial_path(editorial) %></td>
-        <td><%= link_to 'Destroy', editorial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', editorial %></td>
+        <td><%= link_to 'Editar', edit_editorial_path(editorial) %></td>
+        <td><%= link_to 'Destruir', editorial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Editorial', new_editorial_path %>
+<%= link_to 'Nuevo Proveedor', new_editorial_path %>

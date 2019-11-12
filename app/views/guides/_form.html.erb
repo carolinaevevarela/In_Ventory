@@ -23,7 +23,9 @@
     <%= form.text_field :number_of_guide %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions" onSubmit="alert('Guía creada exitosamente');">
+    <%= content_tag :button, type: :submit do %>
+     Crear guía
+    <% end %>
   </div>
 <% end %>

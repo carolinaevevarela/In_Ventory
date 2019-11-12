@@ -1,10 +1,14 @@
 body {
-  background-color: #85adad;
+  background-color: white;
   color: #333;
   margin: 33px;
   font-family: 'Arvo', serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+.warning-color {
+  background-color: #fb3;
 }
 
 p, ol, ul, td {
@@ -62,6 +66,11 @@ div {
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
 
   h2 {
     text-align: left;

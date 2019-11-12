@@ -18,7 +18,9 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions" onSubmit="alert('Categoría creada exitosamente');">
+    <%= content_tag :button, type: :submit do %>
+     Crear categoría
+    <% end %>
   </div>
 <% end %>
