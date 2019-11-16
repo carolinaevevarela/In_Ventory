@@ -15,3 +15,13 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function findBook(isbn){
+$.ajax({
+    url: '/books/find_isbn',
+    type: 'GET',
+    dataType: 'script',
+    data: {isbn: $(isbn).val()}
+  })
+
+}

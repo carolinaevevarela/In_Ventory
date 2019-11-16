@@ -1,6 +1,6 @@
 <%= form_with(model: guide_item,
 remote: true,
-html: { id: "guide_items", :"data-type" => "json"}) do |form| %>
+html: { id: "guide_items", :"data-type" => "script"}) do |form| %>
   <% if guide_item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(guide_item.errors.count, "error") %> prohibited this guide_item from being saved:</h2>
@@ -12,11 +12,16 @@ html: { id: "guide_items", :"data-type" => "json"}) do |form| %>
       </ul>
     </div>
   <% end %>
+
+<%= form.text_field :guide_id, value: @guide.id %>
+<%= form.text_field :book_id %>
+
+
   <div class="form-row col-md-12">
   <ul>
     <div class="field">
       <%= form.label :isbn %>
-      <%= form.text_field :isbn, placeholder: "Isbn" %>
+      <%= form.text_field :isbn, placeholder: "Isbn", onchange: "findBook(this)" %>
     </div>
   </ul>
 

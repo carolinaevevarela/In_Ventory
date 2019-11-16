@@ -8,6 +8,10 @@ class BooksController < ApplicationController
     @books = Book.where("title LIKE ? OR author LIKE ?",palabra,palabra)
   end
 
+  def find_isbn
+    @book = Book.find_by(isbn: params[:isbn])
+  end
+
   # GET /books/1
   # GET /books/1.json
   def show

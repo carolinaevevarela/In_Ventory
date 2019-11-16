@@ -24,9 +24,7 @@ class GuideItemsController < ApplicationController
   # POST /guide_items
   # POST /guide_items.json
   def create
-    guide = Guide.find(params[:guide_id])
     @guide_item = GuideItem.create(guide_item_params)
-    guide.guide_items << @guide_items
 
     respond_to do |format|
       if @guide_item.save
@@ -73,6 +71,6 @@ class GuideItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_item_params
-      params.require(:guide_item).permit(:isbn, :quantity, :pneto, :pvp)
+      params.require(:guide_item).permit(:isbn, :quantity, :pneto, :pvp, :guide_id, :book_id)
     end
 end

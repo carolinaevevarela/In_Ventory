@@ -28,7 +28,15 @@
     </tr>
   </thead>
 
-  <tbody id='guide_items'>
+  <tbody id='guide_items_table'>
+    <% @guide.guide_items.each do |gi| %>
+    <tr>
+      <td><%= gi.isbn %></td>
+      <td><%= gi.quantity %></td>
+      <td><%= gi.pneto %></td>
+      <td><%= gi.pvp %></td>
+    </tr>
+    <% end %>
 
   </tbody>
 </table>

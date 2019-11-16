@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resources :guides
   resources :editorials
   resources :categories
-  resources :books
+  resources :books do
+    collection do
+      get "find_isbn"
+    end
+  end
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'pages/index'
   devise_for :users, controllers: {

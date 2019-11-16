@@ -1,1 +1,2 @@
-$('#item-list').append('<%= j render @guide_item %>')
+var new_book = "<tr><td><%= @guide_item.isbn %></td><td><%= @guide_item.quantity %></td><td><%= @guide_item.pneto %></td><td><%= @guide_item.pvp %></td></tr>"
+$("#guide_items_table").append(new_book);
