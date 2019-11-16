@@ -1,4 +1,6 @@
-<%= form_with(model: guide_item, remote: true) do |form| %>
+<%= form_with(model: guide_item,
+remote: true,
+html: { id: "guide_items", :"data-type" => "json"}) do |form| %>
   <% if guide_item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(guide_item.errors.count, "error") %> prohibited this guide_item from being saved:</h2>
@@ -10,40 +12,39 @@
       </ul>
     </div>
   <% end %>
+  <div class="form-row col-md-12">
+  <ul>
+    <div class="field">
+      <%= form.label :isbn %>
+      <%= form.text_field :isbn, placeholder: "Isbn" %>
+    </div>
+  </ul>
 
-<div class="form-row col-md-12">
-<ul>
-  <div class="field">
-    <%= form.label :isbn %>
-    <%= form.text_field :isbn, placeholder: "Isbn" %>
-  </div>
-</ul>
+  <ul>
+    <div class="field">
+      <%= form.label :quantity %>
+      <%= form.number_field :quantity, placeholder: "Cantidad" %>
+    </div>
+  </ul>
 
-<ul>
-  <div class="field">
-    <%= form.label :quantity %>
-    <%= form.number_field :quantity, placeholder: "Cantidad" %>
-  </div>
-</ul>
+  <ul>
+    <div class="field">
+      <%= form.label :pneto %>
+      <%= form.number_field :pneto, placeholder: "Precio neto" %>
+    </div>
+  </ul>
 
-<ul>
-  <div class="field">
-    <%= form.label :pneto %>
-    <%= form.number_field :pneto, placeholder: "Precio neto" %>
-  </div>
-</ul>
+  <ul>
+    <div class="field">
+      <%= form.label :pvp %>
+      <%= form.number_field :pvp, placeholder: "PVP" %>
+    </div>
+  </ul>
 
-<ul>
-  <div class="field">
-    <%= form.label :pvp %>
-    <%= form.number_field :pvp, placeholder: "PVP" %>
-  </div>
-</ul>
-
-<ul>
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-</ul>
-<% end %>
+  <ul>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  </ul>
+  <% end %>
 </div>

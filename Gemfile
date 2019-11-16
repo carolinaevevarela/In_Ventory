@@ -9,6 +9,7 @@ gem 'rails_admin', '~> 2.0'
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'cancancan'
 gem 'i18n', '~> 1.7'
+gem 'jquery-turbolinks'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 gem 'pg', group: :production
